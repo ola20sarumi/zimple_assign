@@ -1,0 +1,10 @@
+<router-outlet>
+<div *ngIf="getbreeds">
+  <div  *ngFor = "let breed of getbreeds.message | keyvalue">
+    <a [routerLink]="['/breed', breed.key]" routerLinkActive="router-link-active" >{{breed.key}}</a>
+  
+  </div>
+</div>
+  </router-outlet>
+
+  
