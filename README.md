@@ -22,6 +22,7 @@ HTML/CSS: For structuring and styling the application.
 
 **Setup Instructions**
 git clone https://github.com/your-username/your-repo-name.git
+
 cd your-repo-name
 
 **Install Dependencies:**
