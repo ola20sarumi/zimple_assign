@@ -1,6 +1,16 @@
-<router-outlet>
-    <p>picture-page works!</p>
-<div *ngIf="imageList">
-<img src="{{imageList.message[0]}}" alt="breed_image">
-</div>
-</router-outlet>
+<div *ngIf="imageList && imageList.length > 0">
+    <h2>Images of {{ breedName }}</h2>
+    <div class="container">
+
+  
+      <!-- Right Side: Images -->
+      <div class="image-container">
+        <div *ngFor="let imageUrl of imageList" class="image-item">
+          <img [src]="imageUrl" alt="Dog image" class="dog-image">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!imageList || imageList.length === 0">
+    <p>No images found for {{ breedName }}.</p>
+  </div>

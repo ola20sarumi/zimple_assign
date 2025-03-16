@@ -3,7 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { PicturePageComponent } from './picture-page/picture-page.component';
 
 const routes: Routes = [
-  {path: 'breed/:breedName', component: PicturePageComponent}
+  {path: 'breed/:breedName', component: PicturePageComponent},
+  { path: '', redirectTo: '/', pathMatch: 'full' }
 ];
 
 @NgModule({

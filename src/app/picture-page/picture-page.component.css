@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .url-list {
+    flex: 1;
+    max-width: 300px;
+    overflow-y: auto;
+    border-right: 2px solid #ccc;
+    padding-right: 20px;
+  }
+  
+  .url-list h3 {
+    margin-top: 0;
+  }
+  
+  .url-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .url-list li {
+    margin-bottom: 10px;
+  }
+  
+  .url-list a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .url-list a:hover {
+    text-decoration: underline;
+  }
+  
+  .image-container {
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .image-item {
+    flex: 1 1 calc(33.33% - 10px);
+    box-sizing: border-box;
+  }
+  
+  .dog-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }

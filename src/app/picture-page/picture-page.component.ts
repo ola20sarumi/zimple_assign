@@ -11,23 +11,27 @@ export class PicturePageComponent {
   public breedName: string = '';
   public imageList: any;
 
-  constructor(private http : HttpClient, private activatedRoute: ActivatedRoute){
+  constructor(private http: HttpClient, private activatedRoute: ActivatedRoute) {}
 
-  }
-  ngOnInit(): void{
+  ngOnInit(): void {
     this.activatedRoute.params.subscribe(data => {
-      this.breedName = data['breedName']
-      console.log(data);
-    })
-    this.fetchImages();
+      this.breedName = data['breedName']; // Get the breed name from the route
+      console.log('Breed Name:', this.breedName); // Debugging
+      this.fetchImages(); // Fetch images after getting the breed name
+    });
   }
-  
 
-  public fetchImages(){
+  public fetchImages() {
     this.http.get(`https://dog.ceo/api/breed/${this.breedName}/images`)
-    .subscribe((data) => {
-      console.log(data); 
-      this.imageList = data;
-    })
+      .subscribe(
+        (data: any) => {
+          console.log('API Response:', data); // Debugging
+          this.imageList = data.message; // Assign the array of image URLs
+          console.log('Image URLs:', this.imageList); // Debugging
+        },
+        (error) => {
+          console.error('Error fetching images:', error);
+        }
+      );
   }
 }
