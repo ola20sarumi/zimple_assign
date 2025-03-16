@@ -26,6 +26,7 @@ cd your-repo-name
 
 **Install Dependencies:**
 Make sure you have Node.js and Angular CLI installed.
+
 npm install
 
 **Run the Project:**
